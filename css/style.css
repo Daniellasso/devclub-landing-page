@@ -1,0 +1,3318 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    color: #111827;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* =========================
+   VARIÁVEIS
+========================= */
+
+:root {
+
+    /* Cores */
+
+    --primary: #0FCB8C;
+    --primary-dark: #0ca46f;
+    --secondary: #111827;
+    --gray: #6B7280;
+    --gray-light: #F4F5F7;
+    --border: #E5E7EB;
+    --white: #FFFFFF;
+    --black: #000000;
+
+    /* Sombras */
+
+    --shadow-sm: 0 5px 15px rgba(0, 0, 0, .08);
+
+    --shadow-md: 0 15px 40px rgba(0, 0, 0, .10);
+
+    --shadow-lg: 0 25px 60px rgba(0, 0, 0, .15);
+
+    /* Bordas */
+
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 40px;
+
+    /* Transições */
+
+    --transition: .35s ease;
+
+    /* Largura */
+
+    --container: 1240px;
+
+}
+
+/* =========================
+   ELEMENTOS
+========================= */
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+
+    background: var(--primary);
+    border-radius: 50px;
+
+}
+
+body::-webkit-scrollbar-track {
+
+    background: #ececec;
+
+}
+
+img {
+
+    max-width: 100%;
+    display: block;
+
+}
+
+button {
+
+    border: none;
+    cursor: pointer;
+    background: none;
+    font-family: inherit;
+
+}
+
+a {
+
+    text-decoration: none;
+    color: inherit;
+
+}
+
+ul {
+
+    list-style: none;
+
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+
+    width: min(92%, var(--container));
+
+    margin: auto;
+
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+
+section {
+
+    padding: 110px 0;
+
+    position: relative;
+
+}
+
+/* =========================
+   TÍTULOS
+========================= */
+
+h1 {
+
+    font-size: clamp(3rem, 6vw, 5rem);
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+}
+
+h2 {
+
+    font-size: clamp(2rem, 4vw, 3.5rem);
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    margin-bottom: 30px;
+
+}
+
+h3 {
+
+    font-size: 1.35rem;
+
+    font-weight: 700;
+
+}
+
+p {
+
+    color: var(--gray);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+}
+
+/* =========================
+   BOTÃO PRINCIPAL
+========================= */
+
+.btn-primary {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 18px 36px;
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    transition: var(--transition);
+
+    box-shadow: var(--shadow-sm);
+
+    gap: 10px;
+
+}
+
+.btn-primary:hover {
+
+    background: var(--primary-dark);
+
+    transform: translateY(-5px);
+
+    box-shadow: var(--shadow-md);
+
+}
+
+/* =========================
+   ÍCONES CIRCULARES
+========================= */
+
+.icon-circle {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 12px 30px rgba(15, 203, 140, .25);
+
+}
+
+.icon-circle .seta {
+    width: 60px;
+    height: auto;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+
+    background: var(--white);
+
+    border-radius: 24px;
+
+    box-shadow: var(--shadow-sm);
+
+    transition: var(--transition);
+
+}
+
+.card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+/* =========================
+   TEXTO VERDE
+========================= */
+
+.text-primary {
+
+    color: var(--primary);
+
+}
+
+/* =========================
+   DIVISÃO
+========================= */
+
+.divider {
+
+    width: 100%;
+
+    height: 1px;
+
+    background: var(--border);
+
+    margin: 80px 0;
+
+}
+
+/* =========================
+   SELEÇÃO DE TEXTO
+========================= */
+
+::selection {
+
+    background: var(--primary);
+
+    color: white;
+
+}
+
+/* =========================
+   FOCO
+========================= */
+
+button:focus,
+a:focus {
+
+    outline: none;
+
+}
+
+/* =========================
+   UTILITÁRIOS
+========================= */
+
+.center {
+
+    text-align: center;
+
+}
+
+.hidden {
+
+    display: none;
+
+}
+
+.mt-1 {
+    margin-top: 10px;
+}
+
+.mt-2 {
+    margin-top: 20px;
+}
+
+.mt-3 {
+    margin-top: 30px;
+}
+
+.mt-4 {
+    margin-top: 40px;
+}
+
+.mt-5 {
+    margin-top: 50px;
+}
+
+.mb-1 {
+    margin-bottom: 10px;
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
+
+.mb-3 {
+    margin-bottom: 30px;
+}
+
+.mb-4 {
+    margin-bottom: 40px;
+}
+
+.mb-5 {
+    margin-bottom: 50px;
+}
+
+/* =======================================================
+   DEVCLUB LANDING PAGE
+   Arquivo: style.css
+   Parte 2/10
+   Header + Navbar + Menu Mobile
+=======================================================*/
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+    transition: all .35s ease;
+    background-color: #1D1C1C;
+
+}
+
+.header.scrolled {
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .08);
+
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+}
+
+.logo img {
+
+    width: 400px;
+
+    transition: .35s;
+
+}
+
+.logo:hover img {
+
+    transform: scale(1.05);
+
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 50px;
+
+}
+
+.menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 38px;
+
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.menu li {
+
+    position: relative;
+
+}
+
+.menu li a {
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #fff;
+
+    transition: .3s;
+
+    position: relative;
+
+}
+
+/* Linha animada */
+
+.menu li a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+
+    height: 3px;
+
+    border-radius: 30px;
+
+    background: var(--primary);
+
+    transition: .35s;
+
+}
+
+.menu li a:hover {
+
+    color: var(--primary);
+
+}
+
+.menu li a:hover::after {
+
+    width: 100%;
+
+}
+
+/* =========================
+   BOTÃO DA NAVBAR
+========================= */
+
+.navbar .btn-primary {
+
+    padding: 14px 28px;
+
+    font-size: 15px;
+
+}
+
+/* =========================
+   MENU MOBILE
+========================= */
+
+.menu-mobile {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    border-radius: 12px;
+
+    transition: .35s;
+
+}
+
+.menu-mobile:hover {
+
+    background: #f3f4f6;
+
+}
+
+/* Linhas */
+
+.menu-mobile span {
+
+    width: 26px;
+
+    height: 3px;
+
+    border-radius: 30px;
+
+    background: #111827;
+
+    transition: .35s;
+
+}
+
+/* =========================
+   MENU ABERTO
+========================= */
+
+.menu-mobile.active span:nth-child(1) {
+
+    transform: translateY(9px) rotate(45deg);
+
+}
+
+.menu-mobile.active span:nth-child(2) {
+
+    opacity: 0;
+
+}
+
+.menu-mobile.active span:nth-child(3) {
+
+    transform: translateY(-9px) rotate(-45deg);
+
+}
+
+/* =========================
+   MENU MOBILE (PAINEL)
+========================= */
+
+.mobile-nav {
+
+    position: fixed;
+
+    top: 90px;
+
+    left: -100%;
+
+    width: 100%;
+
+    height: calc(100vh - 90px);
+
+    background: white;
+
+    transition: .45s ease;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 999;
+
+}
+
+.mobile-nav.active {
+
+    left: 0;
+
+}
+
+.mobile-nav ul {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 35px;
+
+}
+
+.mobile-nav a {
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    transition: .3s;
+
+}
+
+.mobile-nav a:hover {
+
+    color: var(--primary);
+
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, .45);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .35s;
+
+    z-index: 998;
+
+}
+
+.overlay.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+/* =========================
+   CTA NAVBAR
+========================= */
+
+.nav-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+/* =========================
+   ANIMAÇÃO HEADER
+========================= */
+
+.header {
+
+    animation: headerDown .8s ease;
+
+}
+
+@keyframes headerDown {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-80px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* =========================
+   EFEITO HOVER NAVBAR
+========================= */
+
+.header.scrolled .menu a {
+
+    color: #fff;
+
+}
+
+.header.scrolled .menu a:hover {
+
+    color: var(--primary);
+
+}
+
+/* =========================
+   ESPAÇO DO HERO
+========================= */
+
+.hero {
+    padding-top: 180px;
+
+}
+
+/* =======================================================
+   DEVCLUB LANDING PAGE
+   Arquivo: style.css
+   Parte 3/10
+   Hero Section
+=======================================================*/
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at top right,
+            rgba(15, 203, 140, .08),
+            transparent 35%),
+        #ffffff;
+
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+
+}
+
+/* =========================
+   TEXTO
+========================= */
+
+.hero-text {
+    max-width: 560px;
+
+}
+
+.hero-text .subtitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    background: rgba(15, 203, 140, .12);
+    color: var(--primary);
+    font-size: .95rem;
+    font-weight: 700;
+    border-radius: 50px;
+    margin-bottom: 30px;
+
+}
+
+.hero-text .subtitle::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--primary);
+
+}
+
+.hero-text h1 {
+    margin-bottom: 28px;
+    color: var(--secondary);
+    letter-spacing: -2px;
+
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    max-width: 500px;
+
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+
+.hero-buttons .btn-primary {
+    min-width: 200px;
+
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 34px;
+    border: 2px solid var(--border);
+    border-radius: 50px;
+    color: var(--secondary);
+    font-weight: 700;
+    transition: var(--transition);
+
+}
+
+.btn-secondary:hover {
+
+    background: #111827;
+
+    color: #fff;
+
+    border-color: #111827;
+
+}
+
+/* =========================
+   IMAGEM
+========================= */
+
+.hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.hero-image img {
+    width: 100%;
+    background: transparent;
+    max-width: 620px;
+    border-radius: 100%;
+    object-fit: cover;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, .15);
+    position: relative;
+    z-index: 2;
+    
+}
+
+/* =========================
+CÍRCULO DECORATIVO
+========================= */
+
+.hero-image::before {
+    content: "";
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    z-index: 1;
+
+}
+
+/* =========================
+   CARD FLUTUANTE
+========================= */
+
+.hero-card {
+
+    position: absolute;
+
+    bottom: 40px;
+
+    left: -30px;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    padding: 22px;
+
+    width: 240px;
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, .15);
+
+    z-index: 5;
+
+}
+
+.hero-card h3 {
+
+    color: var(--secondary);
+
+    margin-bottom: 8px;
+
+}
+
+.hero-card p {
+
+    font-size: .9rem;
+
+}
+
+/* =========================
+   BADGE SUPERIOR
+========================= */
+
+.hero-badge {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: -20px;
+
+    width: 95px;
+
+    height: 95px;
+
+    background: var(--primary);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #fff;
+
+    font-size: .85rem;
+
+    font-weight: 700;
+
+    text-align: center;
+
+    box-shadow: 0 20px 40px rgba(15, 203, 140, .35);
+
+    z-index: 5;
+
+}
+
+/* =========================
+   FORMAS DECORATIVAS
+========================= */
+
+.hero-shape {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: rgba(15, 203, 140, .08);
+
+    pointer-events: none;
+
+}
+
+.hero-shape.one {
+
+    width: 120px;
+
+    height: 120px;
+
+    top: 90px;
+
+    left: -40px;
+
+}
+
+.hero-shape.two {
+
+    width: 70px;
+
+    height: 70px;
+
+    bottom: 80px;
+
+    right: 120px;
+
+}
+
+.hero-shape.three {
+
+    width: 28px;
+
+    height: 28px;
+
+    top: 180px;
+
+    right: 60px;
+
+    background: var(--primary);
+
+}
+
+/* =========================
+   INDICADOR DE SCROLL
+========================= */
+
+.scroll-indicator {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 30px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+.scroll-indicator span {
+
+    font-size: .8rem;
+
+    font-weight: 600;
+
+    color: var(--gray);
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+.scroll-indicator .mouse {
+
+    width: 28px;
+
+    height: 48px;
+
+    border: 2px solid var(--gray);
+
+    border-radius: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding-top: 8px;
+
+}
+
+.scroll-indicator .mouse::before {
+
+    content: "";
+
+    width: 5px;
+
+    height: 10px;
+
+    background: var(--primary);
+
+    border-radius: 50px;
+
+}
+
+/* =========================
+   ESTATÍSTICAS
+========================= */
+
+.hero-stats {
+
+    display: flex;
+
+    gap: 45px;
+
+    margin-top: 55px;
+
+}
+
+.hero-stat {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.hero-stat h2 {
+
+    color: var(--primary);
+
+    font-size: 2rem;
+
+    margin-bottom: 4px;
+
+}
+
+.hero-stat span {
+
+    color: var(--gray);
+
+    font-size: .9rem;
+
+}
+
+/* =========================
+   DEGRADÊ DECORATIVO
+========================= */
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    height: 160px;
+
+    background: linear-gradient(to bottom,
+            transparent,
+            #ffffff);
+
+    pointer-events: none;
+
+}
+
+/* =======================================================
+   DEVCLUB LANDING PAGE
+   Arquivo: style.css
+   Parte 4/10
+   Marquee + Seção Sobre
+=======================================================*/
+
+
+/*=======================================================
+=            MARQUEE                                    =
+=======================================================*/
+
+.marquee {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--primary);
+
+    padding: 22px 0;
+
+}
+
+.marquee::before,
+.marquee::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    width: 120px;
+
+    height: 100%;
+
+    z-index: 2;
+
+}
+
+.marquee::before {
+
+    left: 0;
+
+    background: linear-gradient(to right,
+            var(--primary),
+            transparent);
+
+}
+
+.marquee::after {
+
+    right: 0;
+
+    background: linear-gradient(to left,
+            var(--primary),
+            transparent);
+
+}
+
+.marquee-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    width: max-content;
+    white-space: nowrap;
+
+}
+
+.marquee-content span {
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+    flex-shrink: 0;
+
+}
+
+.marquee-content span:nth-child(even) {
+
+    opacity: .45;
+
+}
+
+
+/*=======================================================
+=            ABOUT                                      =
+=======================================================*/
+
+.about {
+
+    background: #fff;
+
+}
+
+.about h2 {
+
+    max-width: 760px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+
+}
+
+
+/*=======================================================
+=            CONTAINER                                  =
+=======================================================*/
+
+.about-content {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+/*=======================================================
+=            COLUNA ESQUERDA                            =
+=======================================================*/
+
+.about-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.about-left .icon-circle {
+    margin-bottom: 28px;
+
+}
+
+.about-left p {
+    margin-bottom: 35px;
+    font-size: 1.05rem;
+
+}
+
+
+/*=======================================================
+=            COLUNA DIREITA                             =
+=======================================================*/
+
+.about-right {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 28px;
+
+}
+
+
+/*=======================================================
+=            FEATURE CARD                               =
+=======================================================*/
+
+.feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+
+    background: #fff;
+
+    padding: 28px;
+
+    border-radius: 24px;
+
+    border: 1px solid var(--border);
+
+    transition: var(--transition);
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+.feature:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: var(--shadow-lg);
+
+    border-color: transparent;
+
+}
+
+.feature h3 {
+
+    margin-bottom: 8px;
+
+    color: var(--secondary);
+
+}
+
+.feature p {
+
+    font-size: .95rem;
+
+}
+
+
+/*=======================================================
+=            ÍCONES                                     =
+=======================================================*/
+
+.feature .icon-circle {
+    width: 70px;
+    height: 70px;
+    transition: var(--transition);
+
+}
+
+.feature:hover .icon-circle {
+    transform: rotate(10deg) scale(1.08);
+
+}
+
+
+/*=======================================================
+=            LISTA DE BENEFÍCIOS                        =
+=======================================================*/
+
+.about-benefits {
+
+    margin-top: 35px;
+
+    display: grid;
+
+    gap: 18px;
+
+}
+
+.about-benefits li {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: var(--secondary);
+
+    font-weight: 600;
+
+}
+
+.about-benefits li::before {
+
+    content: "✔";
+
+    width: 28px;
+
+    height: 28px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(15, 203, 140, .15);
+
+    color: var(--primary);
+
+    font-size: .85rem;
+
+}
+
+
+/*=======================================================
+=            CARD DECORATIVO                            =
+=======================================================*/
+
+.about-card {
+
+    margin-top: 45px;
+
+    background: linear-gradient(135deg,
+            #ffffff,
+            #f8f9fb);
+
+    padding: 28px;
+
+    border-radius: 22px;
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+.about-card h3 {
+
+    margin-bottom: 15px;
+
+}
+
+.about-card p {
+
+    margin-bottom: 18px;
+
+}
+
+
+/*=======================================================
+=            LINHA DECORATIVA                           =
+=======================================================*/
+
+.about h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 90px;
+
+    height: 5px;
+
+    margin: 22px auto 0;
+
+    background: var(--primary);
+
+    border-radius: 30px;
+
+}
+
+
+/*=======================================================
+=            BACKGROUND DECORATIVO                      =
+=======================================================*/
+
+.about::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+
+    height: 420px;
+
+    border-radius: 50%;
+
+    background: rgba(15, 203, 140, .05);
+
+    top: -180px;
+
+    left: -180px;
+
+    z-index: 0;
+
+}
+
+.about::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+
+    height: 260px;
+
+    border-radius: 50%;
+
+    background: rgba(15, 203, 140, .04);
+
+    right: -120px;
+
+    bottom: -120px;
+
+}
+
+
+/*=======================================================
+=            ORGANIZAÇÃO                                =
+=======================================================*/
+
+.about .container {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/*=======================================================
+=            HOVER BOTÃO                                =
+=======================================================*/
+
+.about .btn-primary {
+    margin-top: 10px;
+
+}
+
+
+/*=======================================================
+=            SECTION                                    =
+=======================================================*/
+
+.languages {
+    position: relative;
+    background: #F8FAFC;
+    overflow: hidden;
+
+}
+
+.languages .container {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/*=======================================================
+=            TÍTULO                                     =
+=======================================================*/
+
+.languages h2 {
+
+    max-width: 760px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+
+}
+
+.languages h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 90px;
+
+    height: 5px;
+
+    margin: 20px auto 0;
+
+    border-radius: 50px;
+
+    background: var(--primary);
+
+}
+
+
+/*=======================================================
+=            GRID                                       =
+=======================================================*/
+
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+
+}
+
+
+/*=======================================================
+=            CARD                                       =
+=======================================================*/
+
+.language-card {
+    position: relative;
+    background: #0ca46f;
+    border-radius: 28px;
+    padding: 45px 30px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    transition: .45s ease;
+    border: 1px solid rgba(0, 0, 0, .05);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .06);
+    transform-style: preserve-3d;
+
+}
+
+
+/*=======================================================
+=            BORDA ANIMADA                              =
+=======================================================*/
+
+.language-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    border-radius: 28px;
+    background: linear-gradient(135deg,
+            transparent,
+            rgba(15, 203, 140, .5),
+            transparent);
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+}
+
+
+/*=======================================================
+=            BRILHO                                     =
+=======================================================*/
+
+.language-card::after {
+    content: "";
+    position: absolute;
+    top: -120%;
+    left: -50%;
+    width: 80%;
+    height: 300%;
+    background:
+
+        linear-gradient(rgba(255, 255, 255, 0),
+
+            rgba(255, 255, 255, .45),
+
+            rgba(255, 255, 255, 0));
+
+    transform: rotate(25deg);
+
+    transition: 1s;
+
+}
+
+
+/*=======================================================
+=            HOVER                                      =
+=======================================================*/
+
+.language-card:hover {
+    transform:
+
+        perspective(1200px) rotateX(8deg) rotateY(-8deg) translateY(-15px);
+
+    box-shadow:
+
+        0 35px 70px rgba(0, 0, 0, .12);
+
+}
+
+.language-card:hover::after {
+
+    left: 160%;
+
+}
+
+
+/*=======================================================
+=            IMAGEM                                     =
+=======================================================*/
+
+.language-card img {
+    width: 110px;
+    margin: 0 auto 28px;
+    transition: .45s ease;
+    position: relative;
+    z-index: 2;
+
+}
+
+
+/*=======================================================
+=            TÍTULO CARD                                =
+=======================================================*/
+
+.language-card h3 {
+
+    color: var(--secondary);
+
+    font-size: 1.35rem;
+
+    margin-bottom: 15px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/*=======================================================
+=            TEXTO                                      =
+=======================================================*/
+
+.language-card p {
+
+    font-size: .95rem;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/*=======================================================
+=            TAG                                        =
+=======================================================*/
+
+.language-tag {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 20px;
+
+    background: rgba(15, 203, 140, .12);
+
+    color: var(--primary);
+
+    padding: 8px 14px;
+
+    border-radius: 30px;
+
+    font-size: .75rem;
+
+    font-weight: 700;
+
+}
+
+
+/*=======================================================
+=            BACKGROUND DECORATIVO                      =
+=======================================================*/
+
+.languages::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    border-radius: 50%;
+
+    background: rgba(15, 203, 140, .05);
+
+    left: -180px;
+
+    top: -180px;
+
+}
+
+.languages::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+
+    height: 320px;
+
+    border-radius: 50%;
+
+    background: rgba(15, 203, 140, .05);
+
+    right: -150px;
+
+    bottom: -120px;
+
+}
+
+
+/*=======================================================
+=            EFEITO DE LUZ                              =
+=======================================================*/
+
+.language-card .glow {
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    background: rgba(15, 203, 140, .15);
+
+    filter: blur(80px);
+
+    border-radius: 50%;
+
+    top: -80px;
+
+    right: -80px;
+
+    opacity: 0;
+
+    transition: .45s;
+
+}
+
+.language-card:hover .glow {
+
+    opacity: 1;
+
+}
+
+
+/*=======================================================
+=            LINHA                                      =
+=======================================================*/
+
+.language-card hr {
+
+    border: none;
+
+    height: 1px;
+
+    background: #ececec;
+
+    margin: 20px 0;
+
+}
+
+
+/*=======================================================
+=            BOTÃO OPCIONAL                             =
+=======================================================*/
+
+.language-card .btn-card {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 20px;
+
+    color: var(--primary);
+
+    font-weight: 700;
+
+    transition: .35s;
+
+}
+
+.language-card .btn-card:hover {
+
+    letter-spacing: .6px;
+
+}
+
+
+/*=======================================================
+=            DELAY PARA ANIMAÇÕES                       =
+=======================================================*/
+
+.language-card:nth-child(2) {
+
+    transition-delay: .08s;
+
+}
+
+.language-card:nth-child(3) {
+
+    transition-delay: .16s;
+
+}
+
+/* =======================================================
+   DEVCLUB LANDING PAGE
+   Arquivo: style.css
+   Parte 6/10
+   Seção "Para quem é o DevClub?"
+=======================================================*/
+
+
+/*=======================================================
+=            SECTION                                    =
+=======================================================*/
+
+.target {
+
+    position: relative;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+}
+
+.target .container {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/*=======================================================
+=            GRID                                       =
+=======================================================*/
+
+.target-content {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 90px;
+
+    align-items: center;
+
+}
+
+
+/*=======================================================
+=            TÍTULO                                     =
+=======================================================*/
+
+.target-left h2 {
+
+    max-width: 520px;
+
+    margin-bottom: 25px;
+
+}
+
+.target-left h2 span {
+
+    color: var(--primary);
+
+}
+
+.target-left>p {
+
+    max-width: 520px;
+
+    margin-bottom: 50px;
+
+}
+
+
+/*=======================================================
+=            ESTATÍSTICAS                               =
+=======================================================*/
+
+.numbers {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+
+/*=======================================================
+=            CARD DOS NÚMEROS                           =
+=======================================================*/
+
+.number {
+
+    background: #fff;
+
+    border-radius: 22px;
+
+    padding: 30px;
+
+    border: 1px solid var(--border);
+
+    transition: .4s ease;
+
+    box-shadow: var(--shadow-sm);
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.number::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 5px;
+
+    background: var(--primary);
+
+}
+
+.number:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+
+/*=======================================================
+=            NÚMEROS                                    =
+=======================================================*/
+
+.number h3 {
+
+    font-size: 2.6rem;
+
+    color: var(--primary);
+
+    margin-bottom: 8px;
+
+    font-weight: 800;
+
+}
+
+.number span {
+
+    color: var(--gray);
+
+    font-size: .95rem;
+
+}
+
+
+/*=======================================================
+=            LADO DIREITO                               =
+=======================================================*/
+
+.target-right {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 28px;
+
+}
+
+
+/*=======================================================
+=            CARDS                                      =
+=======================================================*/
+
+.item {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 24px;
+
+    padding: 28px;
+
+    border-radius: 24px;
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    transition: .35s ease;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+
+/*=======================================================
+=            BARRA LATERAL                              =
+=======================================================*/
+
+.item::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 6px;
+
+    height: 100%;
+
+    background: var(--primary);
+
+    transform: scaleY(0);
+
+    transform-origin: bottom;
+
+    transition: .4s;
+
+}
+
+.item:hover::before {
+
+    transform: scaleY(1);
+
+}
+
+
+/*=======================================================
+=            HOVER                                      =
+=======================================================*/
+
+.item:hover {
+
+    transform: translateX(12px);
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+
+/*=======================================================
+=            ÍCONE                                      =
+=======================================================*/
+
+.item .icon-circle {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+    transition: .4s;
+
+}
+
+.item:hover .icon-circle {
+    transform: rotate(12deg) scale(1.08);
+
+}
+
+
+/*=======================================================
+=            TEXTOS                                     =
+=======================================================*/
+
+.item h3 {
+
+    margin-bottom: 10px;
+
+    color: var(--secondary);
+
+}
+
+.item p {
+
+    font-size: .95rem;
+
+}
+
+
+/*=======================================================
+=            BADGE OPCIONAL                             =
+=======================================================*/
+
+.item .badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 18px;
+
+    background: rgba(15, 203, 140, .12);
+
+    color: var(--primary);
+
+    padding: 8px 14px;
+
+    border-radius: 30px;
+
+    font-size: .8rem;
+
+    font-weight: 700;
+
+}
+
+
+/*=======================================================
+=            FUNDO DECORATIVO                           =
+=======================================================*/
+
+.target::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(15, 203, 140, .05);
+
+    right: -220px;
+
+    top: -180px;
+
+}
+
+.target::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+
+    height: 320px;
+
+    border-radius: 50%;
+
+    background: rgba(15, 203, 140, .04);
+
+    left: -120px;
+
+    bottom: -150px;
+
+}
+
+
+/*=======================================================
+=            CARD DESTACADO                             =
+=======================================================*/
+
+.item:nth-child(2) {
+
+    transform: translateX(35px);
+
+}
+
+.item:nth-child(2):hover {
+
+    transform: translateX(47px);
+
+}
+
+
+/*=======================================================
+=            LINHA DECORATIVA                           =
+=======================================================*/
+
+.target-left h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 90px;
+
+    height: 5px;
+
+    margin-top: 18px;
+
+    border-radius: 50px;
+
+    background: var(--primary);
+
+}
+
+
+/*=======================================================
+=            GLASS EFFECT                               =
+=======================================================*/
+
+.number:hover {
+
+    background:
+
+        linear-gradient(135deg,
+
+            rgba(255, 255, 255, .95),
+
+            rgba(255, 255, 255, .75));
+
+}
+
+
+/*=======================================================
+=            BRILHO                                     =
+=======================================================*/
+
+.item::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: -120%;
+
+    left: -50%;
+
+    width: 80%;
+
+    height: 300%;
+
+    background:
+
+        linear-gradient(rgba(255, 255, 255, 0),
+
+            rgba(255, 255, 255, .45),
+
+            rgba(255, 255, 255, 0));
+
+    transform: rotate(25deg);
+
+    transition: 1s;
+
+}
+
+.item:hover::after {
+
+    left: 170%;
+
+}
+
+/* =======================================================
+   DEVCLUB LANDING PAGE
+   Arquivo: style.css
+   Parte 7/10
+   Founder Section
+=======================================================*/
+
+
+/*=======================================================
+=            SECTION                                    =
+=======================================================*/
+
+.founder {
+
+    position: relative;
+
+    background: #F8FAFC;
+
+    overflow: hidden;
+
+}
+
+.founder .container {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/*=======================================================
+=            GRID                                       =
+=======================================================*/
+
+.founder-content {
+
+    display: grid;
+
+    grid-template-columns: 1fr 520px;
+
+    align-items: center;
+
+    gap: 90px;
+
+}
+
+
+/*=======================================================
+=            TEXTO                                      =
+=======================================================*/
+
+.founder-text {
+
+    position: relative;
+
+}
+
+.founder-text::before {
+
+    content: "“";
+
+    position: absolute;
+
+    top: -90px;
+
+    left: -20px;
+
+    font-size: 180px;
+
+    color: rgba(15, 203, 140, .08);
+
+    font-family: serif;
+
+    line-height: 1;
+
+}
+
+.founder-text h2 {
+
+    max-width: 550px;
+
+    margin-bottom: 30px;
+
+}
+
+.founder-text h2 span {
+
+    color: var(--primary);
+
+}
+
+.founder-text>p {
+
+    font-size: 1.08rem;
+
+    margin-bottom: 45px;
+
+    max-width: 620px;
+
+}
+
+
+/*=======================================================
+=            CARD DO TEXTO                              =
+=======================================================*/
+
+.founder-card {
+
+    background: rgba(255, 255, 255, .75);
+
+    backdrop-filter: blur(15px);
+
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, .35);
+
+    border-radius: 28px;
+
+    padding: 35px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .08);
+
+}
+
+.founder-card p {
+
+    margin-bottom: 20px;
+
+}
+
+.founder-card:last-child p {
+
+    margin-bottom: 0;
+
+}
+
+
+/*=======================================================
+=            IMAGEM                                     =
+=======================================================*/
+
+.founder-image {
+
+    position: relative;
+    display: flex;
+    
+    flex-direction: column;
+    
+    align-items: center;
+    
+}
+
+.founder-image img {
+    background-color: transparent;
+    width: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, .15);
+
+}
+
+.founder-image:hover img {
+    transform: translateY(-10px) scale(1.02);
+
+}
+
+
+/*=======================================================
+=            CÍRCULO                                    =
+=======================================================*/
+
+.founder-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+
+    height: 520px;
+
+    border-radius: 50%;
+
+    background: rgba(15, 203, 140, .10);
+
+    z-index: -1;
+
+}
+
+
+/*=======================================================
+=            BADGE                                      =
+=======================================================*/
+
+.founder-badge {
+
+    position: absolute;
+
+    top: 30px;
+
+    left: -35px;
+
+    background: var(--primary);
+
+    color: #fff;
+
+    padding: 14px 22px;
+
+    border-radius: 50px;
+
+    font-size: .85rem;
+
+    font-weight: 700;
+
+    box-shadow: 0 20px 45px rgba(15, 203, 140, .30);
+
+}
+
+
+/*=======================================================
+=            NOME                                       =
+=======================================================*/
+
+.founder-image h2 {
+
+    margin-top: 30px;
+
+    margin-bottom: 8px;
+
+    text-align: center;
+
+}
+
+.founder-image span {
+
+    color: var(--gray);
+
+    font-weight: 600;
+
+}
+
+
+/*=======================================================
+=            EXPERIÊNCIA                                =
+=======================================================*/
+
+.founder-experience {
+
+    position: absolute;
+
+    bottom: 40px;
+
+    left: -35px;
+
+    width: 190px;
+
+    background: #fff;
+
+    border-radius: 24px;
+
+    padding: 22px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .12);
+
+    text-align: center;
+
+}
+
+.founder-experience h3 {
+
+    color: var(--primary);
+
+    font-size: 2rem;
+
+    margin-bottom: 6px;
+
+}
+
+.founder-experience p {
+
+    font-size: .85rem;
+
+}
+
+
+/*=======================================================
+=            BOTÃO                                      =
+=======================================================*/
+
+.founder-buttons {
+
+    display: flex;
+
+    gap: 20px;
+
+    margin-top: 40px;
+
+    flex-wrap: wrap;
+
+}
+
+
+/*=======================================================
+=            REDE SOCIAL                                =
+=======================================================*/
+
+.founder-social {
+
+    display: flex;
+
+    gap: 18px;
+
+    margin-top: 35px;
+
+}
+
+.founder-social a {
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #fff;
+
+    color: var(--primary);
+
+    font-size: 20px;
+
+    transition: .35s;
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+.founder-social a:hover {
+
+    background: var(--primary);
+
+    color: #fff;
+
+    transform: translateY(-8px);
+
+}
+
+
+/*=======================================================
+=            FUNDO                                      =
+=======================================================*/
+
+.founder::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+
+    height: 420px;
+
+    border-radius: 50%;
+
+    background: rgba(15, 203, 140, .05);
+
+    top: -180px;
+
+    right: -180px;
+
+}
+
+.founder::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+
+    height: 280px;
+
+    border-radius: 50%;
+
+    background: rgba(15, 203, 140, .05);
+
+    left: -120px;
+
+    bottom: -100px;
+
+}
+
+
+/*=======================================================
+=            LINHA                                      =
+=======================================================*/
+
+.founder-text h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 90px;
+
+    height: 5px;
+
+    margin-top: 18px;
+
+    border-radius: 50px;
+
+    background: var(--primary);
+
+}
+
+
+/*=======================================================
+=            DESTAQUE                                   =
+=======================================================*/
+
+.highlight {
+
+    color: var(--primary);
+
+    font-weight: 700;
+
+}
+
+
+/*=======================================================
+=            HOVER CARD                                 =
+=======================================================*/
+
+.founder-card {
+
+    transition: .4s;
+
+}
+
+.founder-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 30px 70px rgba(0, 0, 0, .12);
+
+}
+
+
+/*=======================================================
+=            GLASS LIGHT                                =
+=======================================================*/
+
+.founder-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 28px;
+
+    background:
+
+        linear-gradient(135deg,
+
+            rgba(255, 255, 255, .45),
+
+            transparent);
+
+    pointer-events: none;
+
+}
+
+/* =======================================================
+   DEVCLUB LANDING PAGE
+   Arquivo: style.css
+   Parte 8/10
+   Footer Premium + Back To Top
+=======================================================*/
+
+
+/*=======================================================
+=            FOOTER                                     =
+=======================================================*/
+
+.footer {
+
+    position: relative;
+
+    background: #0F172A;
+
+    color: #fff;
+
+    overflow: hidden;
+
+    padding-top: 90px;
+
+}
+
+
+/*=======================================================
+=            CONTAINER                                  =
+=======================================================*/
+
+.footer-container {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 70px;
+
+    padding-bottom: 70px;
+
+}
+
+
+/*=======================================================
+=            LOGO                                       =
+=======================================================*/
+
+.footer-brand img {
+
+    width: 400px;
+    margin-bottom: 25px;
+
+}
+
+.footer-brand p {
+
+    color: #CBD5E1;
+
+    max-width: 420px;
+
+    line-height: 1.9;
+
+}
+
+
+/*=======================================================
+=            TÍTULOS                                    =
+=======================================================*/
+
+.footer h3 {
+
+    font-size: 1.2rem;
+
+    margin-bottom: 28px;
+
+    color: #fff;
+
+    position: relative;
+
+}
+
+.footer h3::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -10px;
+
+    width: 60px;
+
+    height: 3px;
+
+    border-radius: 30px;
+
+    background: var(--primary);
+
+}
+
+
+/*=======================================================
+=            LINKS                                      =
+=======================================================*/
+
+.footer-links ul {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+.footer-links a {
+
+    color: #CBD5E1;
+
+    transition: .35s;
+
+    position: relative;
+
+}
+
+.footer-links a:hover {
+
+    color: var(--primary);
+
+    padding-left: 10px;
+
+}
+
+
+/*=======================================================
+=            REDES SOCIAIS                              =
+=======================================================*/
+
+.social-icons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+
+}
+
+.social-icons a {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .08);
+    color: #fff;
+    font-size: 20px;
+    transition: .35s;
+    backdrop-filter: blur(10px);
+
+}
+
+.social-icons a:hover {
+    background: var(--primary);
+    transform: translateY(-8px) rotate(8deg);
+
+}
+
+
+/*=======================================================
+=            FOOTER BOTTOM                              =
+=======================================================*/
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+
+.footer-bottom p {
+    color: #94A3B8;
+
+}
+
+.footer-bottom span {
+    color: #94A3B8;
+
+}
+
+
+/*=======================================================
+=            BACKGROUND                                 =
+=======================================================*/
+
+.footer::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: rgba(15, 203, 140, .05);
+    top: -250px;
+    left: -250px;
+
+}
+
+.footer::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: rgba(15, 203, 140, .04);
+    bottom: -150px;
+    right: -150px;
+
+}
+
+
+/*=======================================================
+=            BACK TO TOP                                =
+=======================================================*/
+
+#backToTop {
+    position: fixed;
+    right: 35px;
+    bottom: 35px;
+    width: 58px;
+    height: 58px;
+    border: none;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 20px 45px rgba(15, 203, 140, .35);
+    transition: .35s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+
+}
+
+
+/*=======================================================
+=            BOTÃO VISÍVEL                              =
+=======================================================*/
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+
+/*=======================================================
+=            HOVER                                      =
+=======================================================*/
+
+#backToTop:hover {
+    transform: translateY(-8px);
+    background: var(--primary-dark);
+
+}
+
+
+/*=======================================================
+=            CLIQUE                                     =
+=======================================================*/
+
+#backToTop:active {
+    transform: scale(.95);
+
+}
+
+
+/*=======================================================
+=            ANEL                                       =
+=======================================================*/
+
+#backToTop::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 2px solid rgba(15, 203, 140, .35);
+    animation: pulseRing 2s infinite;
+
+}
+
+
+/*=======================================================
+=            HOVER LINKS                                =
+=======================================================*/
+
+.footer-links li {
+    transition: .35s;
+
+}
+
+.footer-links li:hover {
+    transform: translateX(6px);
+
+}
+
+
+/*=======================================================
+=            COPYRIGHT                                  =
+=======================================================*/
+
+.footer-bottom strong {
+    color: var(--primary);
+
+}
+
+
+/*=======================================================
+=            NEWSLETTER (opcional)                      =
+=======================================================*/
+
+.footer-newsletter {
+    margin-top: 30px;
+
+}
+
+.footer-newsletter form {
+    display: flex;
+    margin-top: 15px;
+
+}
+
+.footer-newsletter input {
+    flex: 1;
+    padding: 16px;
+    border: none;
+    border-radius: 12px 0 0 12px;
+    outline: none;
+
+}
+
+.footer-newsletter button {
+    padding: 0 24px;
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 0 12px 12px 0;
+    cursor: pointer;
+    transition: .35s;
+
+}
+
+.footer-newsletter button:hover {
+    background: var(--primary-dark);
+
+}
+
+
+/*=======================================================
+=            DECORAÇÃO                                  =
+=======================================================*/
+
+.footer-glow {
+
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: rgba(15, 203, 140, .15);
+    filter: blur(120px);
+    border-radius: 50%;
+    right: 0;
+    bottom: 0;
+
+}
+
+
+/*=======================================================
+=            SELEÇÃO                                    =
+=======================================================*/
+
+.footer ::selection {
+    background: var(--primary);
+    color: #fff;
+
+}

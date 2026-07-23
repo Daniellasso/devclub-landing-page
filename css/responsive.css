@@ -1,0 +1,511 @@
+/* =======================================================
+   DEVCLUB LANDING PAGE
+   Arquivo: responsive.css
+   Responsividade Completa
+=======================================================*/
+
+
+/*=======================================================
+=            NOTEBOOK (1400px)                          =
+=======================================================*/
+
+@media (max-width:1400px){
+
+    .container{
+
+        width:min(94%,1200px);
+
+    }
+
+    .hero-content,
+    .target-content,
+    .founder-content{
+
+        gap:60px;
+
+    }
+
+}
+
+
+/*=======================================================
+=            DESKTOP PEQUENO (1200px)                   =
+=======================================================*/
+
+@media (max-width:1200px){
+
+    h1{
+
+        font-size:4rem;
+
+    }
+
+    h2{
+
+        font-size:2.8rem;
+
+    }
+
+    .hero-image img{
+
+        max-width:520px;
+
+    }
+
+    .languages-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+/*=======================================================
+=            TABLET GRANDE (992px)                      =
+=======================================================*/
+
+@media (max-width:992px){
+
+    section{
+
+        padding:90px 0;
+
+    }
+
+    .menu{
+
+        display:none;
+
+    }
+
+    .menu-mobile{
+
+        display:flex;
+
+    }
+
+    .hero-content{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .hero-text{
+
+        max-width:100%;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+    }
+
+    .hero-image{
+
+        margin-top:50px;
+
+    }
+
+    .about-content{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .target-content{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .founder-content{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .footer-container{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+    .numbers{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+/*=======================================================
+=            TABLET (768px)                             =
+=======================================================*/
+
+@media (max-width:768px){
+
+    h1{
+
+        font-size:3.2rem;
+
+    }
+
+    h2{
+
+        font-size:2.3rem;
+
+    }
+
+    section{
+
+        padding:70px 0;
+
+    }
+
+    .hero{
+
+        padding-top:150px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+    .hero-buttons a{
+
+        width:100%;
+
+    }
+
+    .languages-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .numbers{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .footer-container{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+    }
+
+    .footer-bottom{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .hero-card,
+    .hero-badge,
+    .founder-experience{
+
+        display:none;
+
+    }
+
+}
+
+
+/*=======================================================
+=            MOBILE GRANDE (576px)                      =
+=======================================================*/
+
+@media (max-width:576px){
+
+    h1{
+
+        font-size:2.6rem;
+
+    }
+
+    h2{
+
+        font-size:2rem;
+
+    }
+
+    p{
+
+        font-size:.95rem;
+
+    }
+
+    .container{
+
+        width:92%;
+
+    }
+
+    .header .container{
+
+        height:80px;
+
+    }
+
+    .logo img{
+
+        width:140px;
+
+    }
+
+    .btn-primary{
+
+        width:100%;
+
+        padding:16px;
+
+    }
+
+    .btn-secondary{
+
+        width:100%;
+
+        padding:16px;
+
+    }
+
+    .feature{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .item{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .item .icon-circle{
+
+        margin:auto;
+
+    }
+
+    .language-card{
+
+        padding:35px 25px;
+
+    }
+
+    .founder-image img{
+
+        border-radius:20px;
+
+    }
+
+    #backToTop{
+
+        width:50px;
+
+        height:50px;
+
+        right:20px;
+
+        bottom:20px;
+
+    }
+
+}
+
+
+/*=======================================================
+=            MOBILE PEQUENO (420px)                     =
+=======================================================*/
+
+@media (max-width:420px){
+
+    h1{
+
+        font-size:2.2rem;
+
+    }
+
+    h2{
+
+        font-size:1.7rem;
+
+    }
+
+    .subtitle{
+
+        font-size:.8rem;
+
+    }
+
+    .hero{
+
+        padding-top:130px;
+
+    }
+
+    .marquee-content{
+
+        gap:30px;
+
+        font-size:.9rem;
+
+    }
+
+    .number{
+
+        padding:22px;
+
+    }
+
+    .feature{
+
+        padding:22px;
+
+    }
+
+    .item{
+
+        padding:22px;
+
+    }
+
+    .footer{
+
+        padding-top:70px;
+
+    }
+
+}
+
+
+/*=======================================================
+=            MOBILE EXTRA PEQUENO (360px)               =
+=======================================================*/
+
+@media (max-width:360px){
+
+    h1{
+
+        font-size:1.9rem;
+
+    }
+
+    h2{
+
+        font-size:1.5rem;
+
+    }
+
+    .hero-buttons{
+
+        gap:15px;
+
+    }
+
+    .btn-primary{
+
+        font-size:.95rem;
+
+    }
+
+    .language-card{
+
+        padding:25px 20px;
+
+    }
+
+}
+
+
+/*=======================================================
+=            LANDSCAPE                                  =
+=======================================================*/
+
+@media (max-height:500px) and (orientation:landscape){
+
+    .hero{
+
+        padding-top:120px;
+
+    }
+
+    section{
+
+        padding:60px 0;
+
+    }
+
+    .mobile-nav{
+
+        overflow-y:auto;
+
+    }
+
+}
+
+
+/*=======================================================
+=            TELAS MUITO GRANDES                        =
+=======================================================*/
+
+@media (min-width:1700px){
+
+    .container{
+
+        max-width:1450px;
+
+    }
+
+    h1{
+
+        font-size:5.5rem;
+
+    }
+
+    h2{
+
+        font-size:4rem;
+
+    }
+
+}
+
+
+/*=======================================================
+=            ACESSIBILIDADE                             =
+=======================================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}

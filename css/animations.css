@@ -1,0 +1,689 @@
+/* =======================================================
+   DEVCLUB LANDING PAGE
+   Arquivo: animations.css
+   Todas as animações do projeto
+=======================================================*/
+
+
+/*=======================================================
+=            FADE UP                                   =
+=======================================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*=======================================================
+=            FADE DOWN                                 =
+=======================================================*/
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*=======================================================
+=            FADE LEFT                                 =
+=======================================================*/
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+/*=======================================================
+=            FADE RIGHT                                =
+=======================================================*/
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+/*=======================================================
+=            SCALE                                     =
+=======================================================*/
+
+@keyframes scaleIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.7);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/*=======================================================
+=            FLOAT                                     =
+=======================================================*/
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*=======================================================
+=            PULSE                                     =
+=======================================================*/
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.06);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/*=======================================================
+=            PULSE RING                                =
+=======================================================*/
+
+@keyframes pulseRing{
+
+    0%{
+
+        transform:scale(.9);
+
+        opacity:.8;
+
+    }
+
+    70%{
+
+        transform:scale(1.6);
+
+        opacity:0;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:scale(1.6);
+
+    }
+
+}
+
+
+/*=======================================================
+=            ROTATE                                    =
+=======================================================*/
+
+@keyframes rotate360{
+
+    from{
+
+        transform:rotate(0);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/*=======================================================
+=            SHINE                                     =
+=======================================================*/
+
+@keyframes shine{
+
+    from{
+
+        left:-120%;
+
+    }
+
+    to{
+
+        left:160%;
+
+    }
+
+}
+
+
+/*=======================================================
+=            BOUNCE                                    =
+=======================================================*/
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+}
+
+
+/*=======================================================
+=            MARQUEE                                   =
+=======================================================*/
+
+@keyframes marquee{
+
+    from{
+
+        transform:translateX(150%);
+
+    }
+
+    to{
+
+        transform:translateX(-100%);
+
+    }
+
+}
+
+
+/*=======================================================
+=            SCROLL INDICATOR                          =
+=======================================================*/
+
+@keyframes scrollMouse{
+
+    0%{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(14px);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/*=======================================================
+=            GLOW                                      =
+=======================================================*/
+
+@keyframes glow{
+
+    0%{
+
+        opacity:.4;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.4;
+
+    }
+
+}
+
+
+/*=======================================================
+=            BACKGROUND                                =
+=======================================================*/
+
+@keyframes backgroundFloat{
+
+    0%{
+
+        transform:translateY(0) rotate(0deg);
+
+    }
+
+    50%{
+
+        transform:translateY(-25px) rotate(8deg);
+
+    }
+
+    100%{
+
+        transform:translateY(0) rotate(0deg);
+
+    }
+
+}
+
+
+/*=======================================================
+=            HERO IMAGE                                =
+=======================================================*/
+
+.hero-image img{
+
+    animation:floating 6s ease-in-out infinite;
+
+}
+
+.hero-badge{
+
+    animation:pulse 3s infinite;
+
+}
+
+.hero-card{
+
+    animation:floating 5s ease-in-out infinite;
+
+}
+
+
+/*=======================================================
+=            MARQUEE                                   =
+=======================================================*/
+
+.marquee-content{
+
+    animation: marquee 15s linear infinite reverse;
+
+}
+
+
+/*=======================================================
+=            LANGUAGE CARDS                            =
+=======================================================*/
+
+.language-card{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+.language-card:hover img{
+
+    animation:pulse .6s;
+
+}
+
+
+/*=======================================================
+=            FEATURES                                  =
+=======================================================*/
+
+.feature{
+
+    animation:fadeUp .7s ease both;
+
+}
+
+
+/*=======================================================
+=            TARGET                                    =
+=======================================================*/
+
+.item{
+
+    animation:fadeRight .8s ease both;
+
+}
+
+.number{
+
+    animation:scaleIn .8s ease both;
+
+}
+
+
+/*=======================================================
+=            FOUNDER                                   =
+=======================================================*/
+
+.founder-image{
+
+    animation:fadeLeft .9s ease both;
+
+}
+
+.founder-card{
+
+    animation:fadeUp .9s ease both;
+
+}
+
+
+/*=======================================================
+=            FOOTER                                    =
+=======================================================*/
+
+.social-icons a:hover{
+
+    animation:bounce .7s;
+
+}
+
+
+/*=======================================================
+=            BACK TO TOP                               =
+=======================================================*/
+
+#backToTop::before{
+
+    animation:pulseRing 2s infinite;
+
+}
+
+
+/*=======================================================
+=            SCROLL ICON                               =
+=======================================================*/
+
+.scroll-indicator .mouse::before{
+
+    animation:scrollMouse 1.8s infinite;
+
+}
+
+
+/*=======================================================
+=            DECORATIVE CIRCLES                        =
+=======================================================*/
+
+.hero-shape,
+.languages::before,
+.languages::after,
+.target::before,
+.target::after,
+.founder::before,
+.founder::after,
+.footer::before,
+.footer::after{
+
+    animation:backgroundFloat 14s ease-in-out infinite;
+
+}
+
+
+/*=======================================================
+=            HOVER GLOW                                =
+=======================================================*/
+
+.glow{
+
+    animation:glow 3s infinite;
+
+}
+
+/* ========================================================================== */
+
+/* Reveal Scroll */
+
+.reveal {
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+
+}
+
+
+.reveal.active {
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+/* Header Scroll */
+
+.header.scrolled {
+
+    background:#1D1C1C;
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+
+/* Botão Top */
+
+#backToTop {
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.3s;
+
+}
+
+
+#backToTop.show {
+
+    opacity:1;
+
+    pointer-events:auto;
+
+}
+
+/* ===================================================================== */
+
+/* ===============================
+   SECTION REVEAL
+================================ */
+
+
+section {
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+
+}
+
+
+section.section-visible {
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+
+/* ===============================
+   MENU ACTIVE
+================================ */
+.menu a {
+    color: #fff
+}
+
+.menu a.active {
+
+    color:#369D99;
+
+}
+
+
+
+.menu a.active::after {
+
+    width:100%;
+
+}
+
+
+
+
+/* ===============================
+   CARDS
+================================ */
+
+
+.language-card,
+.feature,
+.item {
+
+    opacity:0;
+
+    transform:
+    translateY(40px);
+
+    transition:
+    .7s ease;
+
+}
+
+
+
+.language-card.show-card,
+.feature.show-card,
+.item.show-card {
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+
+}
