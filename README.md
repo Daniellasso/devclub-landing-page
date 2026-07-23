@@ -142,7 +142,7 @@ A página foi desenvolvida inteiramente em **HTML, CSS e JavaScript puros**, sem
 
 1. **Clone o repositório**
    ```bash
-   git clone https://github.com/daniellasso/devclub-landing-page.git
+   git clone https://github.com/Daniellasso/devclub-landing-page.git
    ```
 
 2. **Acesse a pasta do projeto**
